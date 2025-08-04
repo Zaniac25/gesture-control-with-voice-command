@@ -1,0 +1,98 @@
+{
+  "gesture_mappings": {
+    "fist": "close_application",
+    "palm": "stop_action",
+    "thumbs_up": "volume_up",
+    "peace": "screenshot",
+    "ok": "confirm_action",
+    "point": "mouse_click",
+    "three_fingers": "alt_tab",
+    "four_fingers": "show_desktop"
+  },
+  "voice_commands": {
+    "open browser": "open_browser",
+    "close browser": "close_browser",
+    "volume up": "volume_up",
+    "volume down": "volume_down",
+    "mute": "mute_audio",
+    "unmute": "unmute_audio",
+    "take screenshot": "screenshot",
+    "open calculator": "open_calculator",
+    "open notepad": "open_notepad",
+    "minimize window": "minimize_window",
+    "maximize window": "maximize_window",
+    "switch window": "alt_tab",
+    "scroll up": "scroll_up",
+    "scroll down": "scroll_down",
+    "zoom in": "zoom_in",
+    "zoom out": "zoom_out",
+    "hello system": "greeting",
+    "goodbye system": "goodbye",
+    "lock computer": "lock_screen",
+    "shutdown": "shutdown"
+  },
+  "system_actions": {
+    "open_browser": {
+      "command": "webbrowser.open",
+      "params": ["https://www.google.com"],
+      "os_specific": {
+        "linux": {
+          "command": "xdg-open",
+          "params": ["https://www.google.com"]
+        }
+      }
+    },
+    "open_calculator": {
+      "command": "subprocess.run",
+      "params": [["calc"]],
+      "os_specific": {
+        "linux": {
+          "command": "subprocess.run",
+          "params": [["gnome-calculator"]]
+        }
+      }
+    },
+    "volume_up": {
+      "command": "pyautogui.press",
+      "params": ["volumeup"]
+    },
+    "screenshot": {
+      "command": "pyautogui.screenshot",
+      "save_path": "screenshots/{timestamp}.png"
+    }
+  },
+  "custom_macros": [
+    {
+      "name": "presentation_mode",
+      "trigger": "start presentation",
+      "actions": [
+        { "action": "open_browser", "params": ["https://slides.com"] },
+        { "action": "pyautogui.hotkey", "params": ["f11"] }
+      ]
+    },
+    {
+      "name": "work_setup",
+      "trigger": "setup my workspace",
+      "actions": [
+        { "action": "open_browser", "params": ["https://mail.google.com"] },
+        { "action": "open_browser", "params": ["https://calendar.google.com"] },
+        { "action": "open_notepad" }
+      ]
+    }
+  ],
+  "settings": {
+    "voice": {
+      "response_delay": 0.5,
+      "confidence_threshold": 0.7,
+      "alternative_phrases": {
+        "open browser": ["launch browser", "start web browser"],
+        "take screenshot": ["capture screen", "save screenshot"]
+      }
+    },
+    "gesture": {
+      "hold_duration": 0.5,
+      "cooldown_period": 1.0,
+      "sensitivity": 0.8
+    }
+  }
+}
