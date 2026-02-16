@@ -1,24 +1,24 @@
-🖐️🎙️ Hand Gesture & Voice Control System
+# 🖐️🎙️ Hand Gesture & Voice Control System
 
 A powerful Python-based system that allows users to control their computer using hand gestures and voice commands — enabling touchless human-computer interaction.
 
 This project uses Computer Vision and Speech Recognition to perform system-level operations like cursor control, clicking, scrolling, volume adjustment, screenshots, and more.
 
-🚀 Features
+## 🚀 Features
 🖐️ Gesture Controls
 
 Cursor movement using index finger tracking:
 
-Left click / Right click
-Double click
-Scroll up / Scroll down
-Volume control
-Screenshot capture
-System lock
-Smooth cursor movement using EMA (Exponential Moving Average)
-Cooldown protection to prevent repeated triggers
+- Left click / Right click
+- Double click
+- Scroll up / Scroll down
+- Volume control
+- Screenshot capture
+- System lock
+- Smooth cursor movement using EMA (Exponential Moving Average)
+- Cooldown protection to prevent repeated triggers
 
-🎙️ Voice Controls:
+## 🎙️ Voice Controls:
 
 Wake word: "computer"
 Short activation window after wake word
@@ -41,7 +41,8 @@ Rotating logs for debugging
 Configurable gesture-action mapping
 Adjustable sensitivity & smoothing
 
-🏗️ Project Structure
+## 🏗️ Project Structure
+```
 hand_gesture_voice_system/
 │
 ├── main.py
@@ -64,19 +65,21 @@ hand_gesture_voice_system/
 │   └── basic_demo.py
 ├── docs/
 │   └── setup_guide.md
+```
 
-🧠Technologies Used 
+## 🧠Technologies Used 
 
-Python
-OpenCV
-MediaPipe
-PyAutoGUI
-SpeechRecognition
-Threading
-JSON Configuration
-Logging (RotatingFileHandler)
+- Python
+- OpenCV
+- MediaPipe
+- PyAutoGUI
+- SpeechRecognition
+- Threading
+- JSON Configuration
+- Logging (RotatingFileHandler)
 
-⚙️ Installation
+## ⚙️ Installation
+```
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/hand-gesture-voice-control.git
 cd hand-gesture-voice-control
@@ -106,12 +109,12 @@ Make sure:
 Your webcam is connected
 Microphone is enabled
 Proper permissions are granted
-
-🎯 Gesture Mapping (Example)
+```
+## 🎯 Gesture Mapping (Example)
 Gesture	Action
-1 Finger	Move Cursor
-2 Fingers	Left Click
-3 Fingers	Right Click
+- 1 Finger	Move Cursor
+- 2 Fingers	Left Click
+- 3 Fingers	Right Click
 Pinch	Drag
 Palm Open	Scroll
 Fist	Lock System
@@ -146,7 +149,7 @@ Wake word
 Gesture-to-action mapping
 Voice commands
 
-📊 System Architecture
+## 📊 System Architecture
 
 Camera captures frames
 MediaPipe detects hand landmarks
@@ -156,7 +159,7 @@ Voice thread listens for wake word
 Recognized command triggers system action
 Both gesture and voice modules run efficiently without blocking the main loop.
 
-🛠️ Future Improvements
+## 🛠️ Future Improvements
 
 Multi-hand recognition
 Custom gesture training UI
@@ -165,7 +168,7 @@ Cross-platform optimization
 AI-based dynamic gesture learning
 Integration with IoT devices
 
-📸 Demo (Add Screenshots Here)
+### 📸 Demo (Add Screenshots Here)
 
 You can add:
 Running application screenshot
@@ -173,7 +176,7 @@ Hand landmark detection
 HUD display
 Voice activation message
 
-📌 Use Cases
+### 📌 Use Cases
 
 Accessibility support
 Touchless interaction
@@ -182,7 +185,7 @@ Presentations
 Automation enthusiasts
 Smart home integration
 
-🧪 Requirements
+### 🧪 Requirements
 
 Python 3.8+
 Webcam
